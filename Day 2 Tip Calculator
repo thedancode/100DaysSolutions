@@ -11,4 +11,4 @@ contribution = (total_bill*(1+decimal_tip))/num_people
 # Note below how to add trailing zeros when rounding.
 # https://stackoverflow.com/questions/8568233/how-to-print-float-to-n-decimal-places-including-trailing-0s
 
-print(f"Each person should pay: {contribution:.2f}")
+print(f"Each person should pay: ${contribution:.2f}")
