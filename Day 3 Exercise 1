@@ -1,0 +1,7 @@
+#Only my code is provided below; the portions from Angela Yu have been omitted to respect copyright.
+#Insert the below code into the appropriate place.
+
+if number%2 == 0:
+    print("This is an even number.")
+else:
+    print("This is an odd number.")
