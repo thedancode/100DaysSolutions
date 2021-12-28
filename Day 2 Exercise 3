@@ -1,0 +1,13 @@
+#Only my code is provided below; the portions from Angela Yu have been omitted to respect copyright.
+#Insert the below code into the appropriate place.
+
+num_age = int(age)
+
+days = 90*365
+age_in_days = num_age*365
+
+days_remaining = days - age_in_days
+weeks_remaining = int((days_remaining/365)*52)
+months_remaining = int((days_remaining/365)*12)
+
+print(f"You have {days_remaining} days, {weeks_remaining} weeks, and {months_remaining} months left.")
