@@ -1,0 +1,13 @@
+#Only my code is provided below; the portions from Angela Yu have been omitted to respect copyright.
+#Insert the below code into the appropriate place.
+
+if year%100 == 0:
+    if year%4 == 0:
+        print("Leap year.")
+    else:
+        print("Not leap year.")
+else:
+    if year%4 == 0:
+        print("Leap year.")
+    else:
+        print("Not leap year.")
