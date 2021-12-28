@@ -1,0 +1,17 @@
+#This is a generalization of Exercise 1.
+#Whereas the original exercise only wanted the program to produce the sum of any two-digit number, this solution produces the sum for a number of any length.
+
+number = input("Enter a number of any length ")
+
+sum = 0
+
+# Below, we use "for" to go through each digit in the "number" string
+# We use int(x) to convert each digit that the "for" loop goes through into an integer
+# We will be using a recursion with initial value sum = 0
+# If you want to see the running total per iteration over the for loop, insert "print(sum)", indented, at line 15.
+
+for x in number:
+  sum += int(x)
+
+
+print(sum)
