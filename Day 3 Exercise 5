@@ -1,0 +1,29 @@
+#Only my code is provided below; the portions from Angela Yu have been omitted to respect copyright.
+#Insert the below code into the appropriate place.
+
+true_score = 0
+love_score = 0
+
+name1_lowercase = name1.lower()
+name2_lowercase = name2.lower()
+
+for x in name1_lowercase:
+    if x in "true":
+        true_score += 1
+    if x in "love":
+        love_score +=1
+
+for x in name2_lowercase:
+    if x in "true":
+        true_score += 1
+    if x in "love":
+        love_score +=1
+
+compatibility_score = str(true_score) + str(love_score)
+
+if int(compatibility_score) < 10 or int(compatibility_score)>90:
+    print(f"Your score is {compatibility_score}, you go together like coke and mentos.")
+elif int(compatibility_score) >= 40 and int(compatibility_score) <= 50:
+    print(f"Your score is {compatibility_score}, you are alright together.")
+else:
+    print(f"Your score is {compatibility_score}.")
