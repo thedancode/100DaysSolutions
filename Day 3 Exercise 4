@@ -25,7 +25,7 @@ else:
         bill += 0
 
 if extra_cheese == "Y":
-    bill+=1
+    bill += 1
 else:
     bill += 0
 
