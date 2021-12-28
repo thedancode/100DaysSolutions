@@ -1,0 +1,7 @@
+#Only my code is provided below; the portions from Angela Yu have been omitted to respect copyright.
+#Insert the below code into the appropriate place.
+
+bmi = float(weight)/(float(height)**2)
+bmi_rounded = round(bmi)
+
+print(bmi_rounded)
