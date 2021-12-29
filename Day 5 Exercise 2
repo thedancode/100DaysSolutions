@@ -1,0 +1,10 @@
+#Only my code is provided below; the portions from Angela Yu have been omitted to respect copyright.
+#Insert the below code into the appropriate place.
+
+x = student_scores[0]
+
+for score in student_scores:
+    if x < score:
+        x = score
+
+print(f"The highest score in the class is: {x}")
