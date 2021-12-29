@@ -1,0 +1,15 @@
+
+#Only my code is provided below; the portions from Angela Yu have been omitted to respect copyright.
+#Insert the below code into the appropriate place.
+
+height_sum = 0
+num_student = 0
+
+for height in student_heights:
+    height_sum += height
+    num_student += 1
+
+average_height = round(height_sum/num_student)
+
+print(average_height)
+
