@@ -1,0 +1,6 @@
+#Only my code is provided below; the portions from Angela Yu have been omitted to respect copyright.
+#Insert the below code into the appropriate place.
+
+payer_number = random.randint(0,len(names)-1)
+
+print("{} is going to buy the meal today!".format(names[payer_number]))
