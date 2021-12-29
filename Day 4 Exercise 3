@@ -13,3 +13,11 @@ elif row_choice == 2:
 elif row_choice == 3:
     del row3[column_index]
     row3.insert(column_index,"X")  
+
+
+#Alternative
+
+#column_index = int(position[0])-1
+#row_choice = int(position[1])-1
+
+#map[row_choice][column_index] = "X"
