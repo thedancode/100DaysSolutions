@@ -1,0 +1,15 @@
+#Only my code is provided below; the portions from Angela Yu have been omitted to respect copyright.
+#Insert the below code into the appropriate place.
+
+column_index = int(position[0]) - 1
+row_choice = int(position[1])
+
+if row_choice == 1:
+    del row1[column_index]
+    row1.insert(column_index,"X")    
+elif row_choice == 2:
+    del row2[column_index]
+    row2.insert(column_index,"X")  
+elif row_choice == 3:
+    del row3[column_index]
+    row3.insert(column_index,"X")  
