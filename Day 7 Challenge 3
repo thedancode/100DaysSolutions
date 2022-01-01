@@ -1,0 +1,18 @@
+#Only my code is provided below; the portions from Angela Yu have been omitted to respect copyright.
+#Insert the below code into the appropriate place.
+
+
+correct_letters = 0
+
+#Check guessed letter
+
+while correct_letters < word_length:
+  guess = input("Guess a letter: ").lower()
+  for position in range(word_length):
+      letter = chosen_word[position]
+      if letter == guess:
+          display[position] = letter
+          correct_letters += 1
+  print(display)
+
+print("Good job!")
