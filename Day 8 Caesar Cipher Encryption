@@ -1,0 +1,12 @@
+#Only my code is provided below; the portions from Angela Yu have been omitted to respect copyright.
+#Insert the below code into the appropriate place.
+
+def encrypt(text, shift):
+  cipher_text = ''
+  for letter in text:
+    alphabet_index = alphabet.index(letter)
+    translated_index = (alphabet_index + shift) % 26
+    cipher_text += alphabet[translated_index]
+  print(f"The encoded text is {cipher_text}")
+
+encrypt(text, shift)
