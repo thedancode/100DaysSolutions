@@ -1,0 +1,18 @@
+import math
+
+def prime_checker(number):
+    tracker = 0
+    factor_check_count = 0
+    square_root_of_n = math.sqrt(n)
+    upper_limit = math.floor(square_root_of_n)
+    while factor_check_count <= upper_limit:
+        for possible_factor in range(2,upper_limit+1):
+            if number%possible_factor == 0:
+                tracker += 1
+                factor_check_count == upper_limit + 1
+            else:
+                factor_check_count += 1
+    if tracker == 0:
+        print("It's a prime number.")
+    if tracker >= 1:
+        print("It's not a prime number.")
