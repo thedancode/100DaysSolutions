@@ -1,0 +1,15 @@
+#Only my code is provided below; the portions from Angela Yu have been omitted to respect copyright.
+#Insert the below code into the appropriate place.
+
+def decrypt(text, shift):
+  plain_text = ''
+  for letter in text:
+    alphabet_index = alphabet.index(letter)
+    untranslated_index = (alphabet_index - shift) % 26
+    plain_text += alphabet[untranslated_index]
+  print(f"The encoded text is {plain_text}")
+  
+if direction == "decode".lower():
+  decrypt(text, shift)
+elif direction == "encrypt".lower():
+  encrypt(text, shift)
