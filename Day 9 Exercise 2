@@ -1,0 +1,11 @@
+#Only my code is provided below; the portions from Angela Yu have been omitted to respect copyright.
+#Insert the below code into the appropriate place.
+
+def add_new_country(country_input, visits_input, cities_input):
+    travel_log.append(
+        {
+            "country": country_input,
+            "visits": visits_input,
+            "cities": cities_input,
+        }
+        )
