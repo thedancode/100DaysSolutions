@@ -3,7 +3,6 @@
 # I made it so that the dealer stops drawing cards if its hand is less than 17.
 # I attempted the "Expert" difficulty for this project - the only hint being how Blackjack works.
 
-
 ############### Blackjack Project #####################
 
 #Difficulty Expert 🤯: Only use Hint 1 to complete the project.
@@ -56,7 +55,7 @@ def game():
     draw_card(player_hand)
     draw_card(computer_hand)
     print(f"    Your cards: {player_hand}, current score: {sum(player_hand)}")
-    print(f"    Computer's first card: ")
+    print(f"    Computer's first card: {computer_hand}")
     game_continues = True
     while game_continues:
       continue_game = input("Type 'y' to get another card, type 'n' to pass: ")
