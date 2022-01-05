@@ -1,0 +1,84 @@
+# Since the instructions weren't clear on the extent to which the computer/dealer draws cards for theirself and
+# I did not want to look at Angela's code/solution to clarify this aspect of the challenge before trying it on my own,
+# I made it so that the dealer stops drawing cards if its hand is less than 17.
+# I attempted the "Expert" difficulty for this project - the only hint being how Blackjack works.
+
+############### Blackjack Project #####################
+
+#Difficulty Expert 🤯: Only use Hint 1 to complete the project.
+
+############### Our Blackjack House Rules #####################
+
+## The deck is unlimited in size. 
+## There are no jokers. 
+## The Jack/Queen/King all count as 10.
+## The the Ace can count as 11 or 1.
+## Use the following list as the deck of cards:
+## cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+## The cards in the list have equal probability of being drawn.
+## Cards are not removed from the deck as they are drawn.
+## The computer is the dealer.
+
+##################### Hints #####################
+
+#Hint 1: Go to this website and try out the Blackjack game: 
+#   https://games.washingtonpost.com/games/blackjack/
+#Then try out the completed Blackjack project here: 
+#   http://blackjack-final.appbrewery.repl.run
+
+import art
+import random
+
+cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+
+
+def draw_card(hand):
+  new_draw = random.choice(cards)
+  hand.append(new_draw)
+
+def summary(hand):
+      print(f"    Your cards: {hand}, current score: {sum(hand)}")
+
+def determination(sum_player_hand, sum_computer_hand):
+  if sum_computer_hand > 21:
+    print("Opponent went over. You win.")
+  elif sum_player_hand > sum_computer_hand:
+    print("You win!")
+  else:
+    print("You lose.")
+
+def game():
+    player_hand = []
+    computer_hand = []
+    draw_card(player_hand)
+    draw_card(player_hand)
+    draw_card(computer_hand)
+    print(f"    Your cards: {player_hand}, current score: {sum(player_hand)}")
+    print(f"    Computer's first card: ")
+    game_continues = True
+    while game_continues:
+      continue_game = input("Type 'y' to get another card, type 'n' to pass: ")
+      if continue_game == "y":
+        draw_card(player_hand)
+        summary(player_hand)
+        if sum(player_hand) > 21:
+          print("You went over. You lose.")
+          game_continues = False
+      elif continue_game == "n":
+        while sum(computer_hand) < 17:
+          computer_hand.append(random.choice(cards))
+        print(f"    Your final hand: {player_hand}, current score: {sum(player_hand)}")
+        print(f"Computer's final hand: {computer_hand}, final score: {sum(computer_hand)}")
+        determination(sum(player_hand), sum(computer_hand))
+        game_continues = False
+    play_again = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
+    if play_again == 'y':
+      game()
+    else:
+      print("Thank you for playing.")
+
+play = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
+
+if play == 'y':
+  print(art.logo)
+game()
