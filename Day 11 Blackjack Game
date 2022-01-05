@@ -45,6 +45,8 @@ def determination(sum_player_hand, sum_computer_hand):
     print("Opponent went over. You win.")
   elif sum_player_hand > sum_computer_hand:
     print("You win!")
+  elif sum_player_hand == sum_computer_hand:
+    print("Draw!")
   else:
     print("You lose.")
 
