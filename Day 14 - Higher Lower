@@ -1,0 +1,57 @@
+import art
+import game_data
+import random
+import replit
+
+
+def celeb_statement (letter, celeb_name, celeb_description, celeb_country):
+  if letter == "A":
+    print(f"Compare {letter}: {celeb_name}, a {celeb_description}, from {celeb_country}")
+  elif letter == "B":
+    print(f"Against {letter}: {celeb_name}, a {celeb_description}, from {celeb_country}")
+
+def celeb_name(celeb):
+  return celeb["name"]
+
+def celeb_description(celeb):
+  return celeb["description"]
+
+def celeb_country(celeb):
+  return celeb["country"]
+
+def greater_celeb(celeb_A_count,celeb_B_count):
+  if celeb_A_count > celeb_B_count:
+    return "A"
+  elif celeb_A_count < celeb_B_count:
+    return "B"
+
+print(art.logo)
+celeb_list = game_data.data
+
+
+final_score = 0
+
+def game(final_score):
+  celeb_A = random.choice(celeb_list)
+  celeb_A_count = celeb_A["follower_count"]
+  celeb_list.remove(celeb_A)
+  celeb_B = random.choice(celeb_list)
+  celeb_B_count = celeb_B["follower_count"]
+  game_continues = True
+  while game_continues is True:
+    celeb_statement("A", celeb_name(celeb_A), celeb_description(celeb_A), celeb_country(celeb_A))
+    print(art.vs)
+    celeb_statement("B", celeb_name(celeb_B), celeb_description(celeb_B), celeb_country(celeb_B))
+    guess = input("Who has more followers? Type 'A' or 'B': ").upper()
+    if guess == greater_celeb(celeb_A_count,celeb_B_count):
+      final_score += 1
+      replit.clear()
+      print(f"You're right! Current score: {final_score}.")
+      print(art.logo)
+      game(final_score)
+    else:
+      print(f"Sorry, that's wrong. Final score: {final_score}")
+      games_continues = False
+    return
+
+game(final_score)
