@@ -1,3 +1,7 @@
+#NOTE. This is a slightly different version that what Angela wanted. It turns out she did not want new pairs of random celebrities per round.
+# She wanted the celebrity with the higher number of follows to "advance" to the next round.
+# I'll still leave my code as-is.
+
 import art
 import game_data
 import random
