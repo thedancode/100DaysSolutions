@@ -32,7 +32,7 @@ def game():
         attempts_counter(remaining_attempts)
     elif guess == random_number:
       print(f"You got it! The answer is {random_number}.")
-      break
+      < ... >
   if remaining_attempts == 0:
     print("You've run out of guesses. You lose.")
 
